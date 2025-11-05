@@ -1,0 +1,75 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.payment-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.payment-container h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+#gpay {
+  background-color: #202124;
+}
+
+#gpay:hover {
+  background-color: #3c4043;
+}
+
+#cod {
+  background-color: #2e8b57;
+}
+
+#cod:hover {
+  background-color: #3ca86b;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  color: #000;
+}

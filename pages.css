@@ -1,0 +1,556 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+    position:fixed;
+    right:0;
+    top:0;
+    width:100%;
+    z-index:9999;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding:17px 11%;
+    transition:all 0.45s ease;
+    z-index: 2;
+    font-size: 14px;
+}
+.logo{
+    color:black;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index:3;
+    margin-left:-60px;
+    
+}
+.nav{
+    display:flex;
+    list-style: none;
+    gap:25px;
+}
+.nav li a{
+    color:black;
+    text-decoration: none;
+    transition:  0.3s ease;
+    font-size: 14px;
+}
+.nav a:hover{
+    color:rgb(151, 145, 145);
+}
+.nav a.pages{
+    color:rgb(151, 145, 145);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    color:black;
+    margin-right: -20px;
+
+}
+
+.icons i{
+    height:35px;
+    width:35px;
+    display:inline-flex;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    cursor: pointer;
+    font-size: 14px;
+}
+.icons i:hover{
+    color:rgb(151, 145, 145);
+}
+ #menu-icon{
+    font-size: 23px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+    text-decoration: none;
+}
+.cart-icon {
+  position: relative;
+  color:black;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.search-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+#search-box {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.search-container:hover #search-box {
+  width: 180px;
+  opacity: 1;
+}
+
+/* //RESPONSIBLE MEDIA QUERY */
+@media (min-width: 1441px) {
+  header {
+    padding: 20px 12%;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+}
+
+/* ----- Laptops (1025px–1440px) ----- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header {
+    padding: 18px 9%;
+  }
+  .logo {
+    font-size: 28px;
+  }
+  .nav a {
+    font-size: 15px;
+  }
+}
+
+/* ----- Tablets (768px–1024px) ----- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 17px 7%;
+  }
+  .logo {
+    font-size: 26px;
+    margin-left:-3px;
+  }
+  .nav {
+    gap: 18px;
+  }
+  .nav a {
+    font-size: 14px;
+  }
+}
+/* ----- Mobile (min 480px) ----- */
+  @media (max-width: 480px) {
+    header {
+    padding: 10px 6%; 
+    justify-content: space-between; 
+    position: relative;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .icons {
+    display:none;
+  }
+
+  #menu-icon {
+    display: block;
+    z-index: 1001;
+    color:black;
+    font-size: 18px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    padding: 15px 0;
+    display: none;
+    gap: 15px;
+    color:black;
+    z-index: 1000;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+  .nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+
+/* PAGE_IMG */
+.page-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 600px;
+  opacity:80%;
+  margin-top:130px;
+}
+
+.page-img img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  display: block;
+}
+
+/* RESPOSIVE MEDIA QUERY */
+/* ----- Laptops  Big Screen(1025px–1440px) ----- */
+@media (min-width: 1441px) {
+  .page-img img {
+    height: 950px;
+  }
+}
+
+/* ----- Laptops (1025px–1440px) ----- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .page-img img {
+    height: 700px;
+  }
+}
+
+/* ----- Tablet(768px–1024px) ----- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page-img img {
+    height: 500px;
+  }
+}
+
+/* ----- Mobile (max-width: 767px) ----- */
+@media (max-width: 767px) {
+  .page-img img {
+    height: 350px;
+  }
+}
+
+/* IMAGE SEPARATION */
+.separate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: column;
+  text-align: center;
+  padding:20px;
+}
+
+.separate img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity:0.6;
+}
+
+.page-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.text-btn {
+  padding: 10px 25px;
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.text-btn.active {
+  background: black;
+  color: white;
+}
+
+.text-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* ===== Text Boxes ===== */
+.text-box p,
+.t1 p,
+.t2 p {
+  max-width: 450px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+.text-box {
+  display: none;    
+}
+
+.text-box.active {
+  display: block;
+}
+
+
+/* ===== MOBILE (≥320px) ===== */
+@media (min-width: 320px) {
+  .separate {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    margin-top: -250px;
+  }
+
+  .separate img {
+    flex: 1 1 50%;
+    height: 350px;
+  }
+
+  .page-btn {
+    flex: 1 1 40%;
+  }
+}
+
+/* ===== TABLET (≥768px) ===== */
+@media (min-width: 768px) {
+  .separate {
+    justify-content: center;
+    text-align: left;
+    margin-top:-50px;
+  }
+
+  .separate img {
+    flex: 1 1 50%;
+    height: 350px;
+    width:200px;
+  }
+
+  .page-btn {
+    flex: 1 1 40%;
+  }
+}
+
+/* ===== LAPTOP (≥1024px) ===== */
+@media (min-width: 1024px) {
+  .separate img {
+    height: 400px;
+    width: 500px;
+  }
+
+  .text-btn {
+    font-size: 18px;
+  }
+
+  .t1 p, .t2 p {
+    font-size: 16px;
+  }
+}
+
+/* ===== BIG SCREENS (≥1440px) ===== */
+@media (min-width: 1440px) {
+  .separate {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .separate img {
+    height: 400px;
+    width: 500px;
+  }
+
+  .text-btn {
+    font-size: 20px;
+    padding: 15px 35px;
+  }
+
+  .t1 p, .t2 p {
+    font-size: 18px;
+  }
+}
+
+/* WHAT */
+.what {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  width:100%;
+  height:350px;
+  max-width:100%;
+  margin:0 auto;
+}
+
+.what h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #111;
+}
+/* Container to hold all slides */
+.what-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Each slide */
+.what-para {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Start off-screen to the right */
+  width: 100%;
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index:1;
+}
+.what-para.active {
+  left: 0; /* Move into view */
+  opacity: 1;
+  z-index:2;
+}
+
+.what-para.exit-left {
+  left: -100%; /* Slide out to the left */
+  opacity: 0;
+  z-index:1;
+}
+.what-para.exit-right {
+  left: 100%; /* slide out right */
+  opacity: 0;
+}
+.what-para .p {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Sub-text */
+.sub-what h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 0;
+  color: #111;
+}
+
+.sub-what p {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0 0;
+}
+
+/* Arrow */
+.arrow {
+  display: inline-block;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 3;
+}
+
+.arrow:hover {
+  background: #444;
+}
+.arrow.next {
+    right: 8%;
+}
+.arrow.prev {
+    left: 8%;
+}
+
+
+
+/* ===== MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+  .what h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .what-para p {
+    font-size: 14px;
+  }
+  .arrow {
+    padding: 10px;
+  }
+}
+
+/* ===== TABLET (768px–1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .what {
+     padding: 50px 20px; height: 320px; 
+    }
+  .what h3 { 
+    font-size: 24px;
+   }
+  .what-para p { 
+    font-size: 15px; 
+  }
+}
+
+/* ===== LAPTOP (1024px–1139px) ===== */
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .what { 
+    padding: 60px 20px; height: 350px; 
+  }
+  .what h3 { 
+    font-size: 26px; 
+  }
+  .what-para p {
+     font-size: 16px; 
+    }
+}
+
+/* ===== LARGE DESKTOP (1140px and above) ===== */
+@media (min-width: 1140px) {
+  .what { 
+    padding: 80px 40px; height: 400px; 
+  }
+  .what h3 { 
+    font-size: 28px; 
+  }
+  .what-para p {
+     font-size: 18px; 
+    }
+}

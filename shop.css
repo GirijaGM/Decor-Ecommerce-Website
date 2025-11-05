@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+    position:fixed;
+    right:0;
+    top:0;
+    width:100%;
+    z-index:9999;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding:17px 11%;
+    transition:all 0.45s ease;
+    z-index: 2;
+    font-size: 14px;
+}
+.logo{
+    color:black;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index:3;
+    margin-left:-60px;
+    
+}
+.nav{
+    display:flex;
+    list-style: none;
+    gap:25px;
+}
+.nav li a{
+    color:black;
+    text-decoration: none;
+    transition:  0.3s ease;
+    font-size: 14px;
+}
+.nav a:hover{
+    color:rgb(151, 145, 145);
+}
+.nav a.shop{
+    color:rgb(151, 145, 145);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    color:black;
+    margin-right: -20px;
+
+}
+
+.icons i{
+    height:35px;
+    width:35px;
+    display:inline-flex;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    cursor: pointer;
+    font-size: 14px;
+}
+.icons i:hover{
+    color:rgb(151, 145, 145);
+}
+ #menu-icon{
+    font-size: 23px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+    text-decoration: none;
+}
+.cart-icon {
+  position: relative;
+  color:black;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.search-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+#search-box {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.search-container:hover #search-box {
+  width: 180px;
+  opacity: 1;
+}
+
+/* //RESPONSIBLE MEDIA QUERY */
+@media (min-width: 1441px) {
+  header {
+    padding: 20px 12%;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+}
+
+/* ----- Laptops (1025px–1440px) ----- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header {
+    padding: 18px 9%;
+  }
+  .logo {
+    font-size: 28px;
+  }
+  .nav a {
+    font-size: 15px;
+  }
+}
+
+/* ----- Tablets (768px–1024px) ----- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 17px 7%;
+  }
+  .logo {
+    font-size: 26px;
+    margin-left:-3px;
+  }
+  .nav {
+    gap: 18px;
+  }
+  .nav a {
+    font-size: 14px;
+  }
+}
+/* ----- Mobile (min 480px) ----- */
+  @media (max-width: 480px) {
+    header {
+    padding: 10px 6%; 
+    justify-content: space-between; 
+    position: relative;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .icons {
+    display:none;
+  }
+
+  #menu-icon {
+    display: block;
+    z-index: 1001;
+    color:black;
+    font-size: 18px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    padding: 15px 0;
+    display: none;
+    gap: 15px;
+    color:black;
+    z-index: 1000;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+  .nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+
+/* CONTAINER PART */
+.new {
+  text-align: center;
+  font-size: 32px;
+  margin: 100px 0 30px;
+  letter-spacing: 2px;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.cols-img {
+  flex: 0 0 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cols-img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Side Content */
+.rows {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack everything vertically */
+  align-items: flex-start; /* Align text to the left */
+  justify-content: center; /* Vertically centered */
+  gap: 20px; /* Space between each item */
+  height:auto;
+}
+
+.rows h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.rows p {
+  font-size: 18px;
+  color: #222;
+}
+.rows p s {
+    color:rgb(151, 145, 145);
+}
+
+/* Stars */
+.star {
+  display: flex;
+  gap: 3px;
+}
+
+.star i {
+  color: #ccc;
+}
+
+.star i.yellow {
+  color: gold;
+}
+
+/* Description */
+.description {
+  max-width: 450px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.wish-btn,
+.add-btn {
+  padding: 10px 25px;
+  border: 2px solid #333;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn {
+  background: #333;
+  color: white;
+}
+
+.add-btn:hover {
+  background: black;
+}
+
+/* Wishlist */
+.wish-btn {
+  margin-top: 0px;
+}
+
+.wish-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.wish-btn:hover {
+  color: red;
+}
+
+/* Categories */
+.cat p{
+  margin-top: 10px;
+  font-size: 14px;
+  color: black;
+}
+
+/* ========== RESPONSIVE ========== */
+/* ===== MOBILE (≤320px) ===== */
+@media (max-width: 320px) {
+  .separate{
+    flex-direction: column; 
+    align-items: center;
+    padding: 5px;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .new{
+    margin-top:130px;
+  }
+  .rows p{
+    margin-right:380px;
+  }
+  /* Image */
+  .cols-img {
+    flex: 0 0 100%;  
+    height: auto; 
+    width: 100%;  
+  }
+  /* Right side content */
+  .rows {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center; 
+    align-items: center; 
+    gap: 10px;
+    padding: 0; 
+    margin-left: 120px;  
+  }
+  .rows h3 {
+    font-size: 16px;    
+  }
+  .rows p {
+    font-size: 12px; 
+    width:100%;   
+    margin-left:30px;
+  }
+  .rows p s {
+    font-size: 11px;
+  }
+  /* Stars */
+  .star {
+    gap: 1px;
+    width:100px;
+    max-width:100%;
+    margin-right:-70px;
+  }
+  .star i {
+    font-size: 12px;  /* smaller stars */
+  }
+  /* Description */
+  .description {
+    font-size: 12px;
+    line-height: 1.3;
+    max-width:100%;
+    width:200px;
+    text-align: center;
+    margin-right:90px;
+  }
+  /* Buttons */
+  .btn {
+    flex-direction: column; /* stack buttons vertically */
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .wish-btn,
+  .add-btn {
+    padding: 6px 15px;   
+    font-size: 12px;
+    width:100%;
+  }
+  /* Categories */
+  .cat p {
+    font-size: 10px;
+    margin-top: 4px;
+    width:100%;
+    margin-left:10px;
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+  }
+  .description{
+    text-align: left;
+    margin-left:-90px;
+  }
+  .cols-img {
+    width: 250px;
+    height: 250px;
+  }
+  .rows {
+    flex: 1;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+  }
+  .rate{
+    margin-left:-400px;
+  }
+  
+}
+/* laptop */
+@media (max-width: 1024px) {
+  .container {
+    text-align: center;
+  }
+
+  .rows {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cols-img {
+    width: 80%;
+    height: 400px;
+  }
+  .cat{
+    text-align: left;
+  }
+  .star {
+    margin-left:-350px;
+  }
+  .rows h3{
+    text-align: left;
+    margin-left:-220px;
+  }
+  .rows p s{
+    margin-left: -350px;
+  }
+  .description{
+    text-align: left;
+  }
+  .btn{
+    margin-left: -130px;
+  }
+  .cat{
+    margin-left: -240px;
+  }
+  .rate{
+    margin-left:-400px;
+  }
+}
+
+/* Big Screen */
+@media (min-width: 1440px) {
+  .cols-img {
+    width: 450px;
+    height: 450px;
+  }
+
+  .rows h3 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+  .rows{
+    column-gap: 40px;
+    margin-left:50px;
+  }
+}

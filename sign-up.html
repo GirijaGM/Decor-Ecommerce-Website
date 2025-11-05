@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+<body>
+    <div class="auth-container">
+    <div class="auth-box">
+        <div class="form-toggle">
+            <button id="signInBtn" class="active">Sign In</button>
+            <button id="signUpBtn">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signInForm" class="form active">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <i id="togglePassword" class="fa-solid fa-eye"></i>
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signUpForm" class="form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <i id="togglePassword" class="fa-solid fa-eye"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+            <input type="password" placeholder="Confirm Password" required>
+            <i id="togglePassword" class="fa-solid fa-eye"></i>
+            <button type="submit" class="submit-btn">Sign Up</button>
+            <small class="error-message"></small>
+        </form>
+    </div>
+</div>
+<script src="sign-up.js"></script> 
+<script src="payment.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
