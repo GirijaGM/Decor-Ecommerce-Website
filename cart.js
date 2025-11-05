@@ -4,6 +4,9 @@
   const totalElement = document.getElementById("cart-total");
   const purchaseBtn = document.getElementById("purchase-btn");
 
+    // Stop running if cart container not present
+if (!cartContainer || !totalElement || !purchaseBtn) return;
+
   // Load cart and fix missing quantity
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.forEach(item => {
