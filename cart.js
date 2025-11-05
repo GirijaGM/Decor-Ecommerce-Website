@@ -136,8 +136,9 @@ if (!cartContainer || !totalElement || !purchaseBtn) return;
     // User is signed in → redirect to payment page
     window.location.href = "payment.html";
   } else {
+    alert("You must sign in to make a purchase!");
     // User not signed in → redirect to sign-up page
-    window.location.href = "sign-up.html?redirect=cart.html";
+    window.location.href = "sign-up.html?redirect=payment.html";
   }
 });
 });
