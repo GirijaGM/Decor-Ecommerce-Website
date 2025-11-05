@@ -129,6 +129,7 @@ if (!cartContainer || !totalElement || !purchaseBtn) return;
 
 
   // Purchase Button
+    if (purchaseBtn) {
   purchaseBtn.addEventListener("click", () => {
   const isSignedIn = localStorage.getItem("isSignedIn");
 
@@ -141,5 +142,6 @@ if (!cartContainer || !totalElement || !purchaseBtn) return;
     window.location.href = "sign-up.html?redirect=payment.html";
   }
 });
+}
 });
 
