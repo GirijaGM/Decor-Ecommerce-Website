@@ -17,17 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-// Redirect to sign-in if not logged in
+// FIXED: Redirect to sign-in if not logged in
 document.addEventListener("DOMContentLoaded", () => {
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const isSignedIn = localStorage.getItem("isSignedIn"); 
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")); // optional but useful
 
-  if(localStorage.getItem("isLoggedIn") !== "true") {
+  if (isSignedIn !== "true" || !currentUser) {
     alert("You must be signed in to access the payment page.");
-    window.location.href = "sign-up.html";
+    window.location.href = "sign-up.html?redirect=payment.html";
+    return;
   }
-  
-  });
-
+});
 
 
