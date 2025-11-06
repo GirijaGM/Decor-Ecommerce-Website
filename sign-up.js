@@ -81,12 +81,20 @@ signUpBtn.addEventListener("click", () => {
       localStorage.setItem("isSignedIn", "true");
       localStorage.setItem("currentUser", JSON.stringify(user));
 
-      // Redirect to previous page or cart.html
-      const params = new URLSearchParams(window.location.search);
-      const redirectUrl = params.get("redirect") || "cart.html";
-      window.location.href = redirectUrl;
-    } else {
-      alert("Invalid credentials! Please try again.");
-    }
+      // Check if they came from a purchase flow
+  const redirectFrom = localStorage.getItem("redirectAfterLogin");
+  localStorage.removeItem("redirectAfterLogin");
+
+      if (redirectFrom === "cart.html") {
+    // If they came from Purchase → go directly to payment
+    window.location.href = "payment.html";
+  } else {
+    // Otherwise return to previous page or homepage
+    const redirectUrl =
+      new URLSearchParams(window.location.search).get("redirect") ||
+      "index.html";
+    window.location.href = redirectUrl;
+  }
+}
   });
 });
