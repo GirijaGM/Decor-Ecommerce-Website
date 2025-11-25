@@ -251,7 +251,7 @@ header{
   .nav {
     position: absolute;
     top: 60px;
-    left: 100px;
+    left: 150px;
     width: 100%;
     flex-direction: column;
     align-items: center;
