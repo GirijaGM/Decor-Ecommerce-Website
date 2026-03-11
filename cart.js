@@ -37,10 +37,14 @@ if (!cartContainer || !totalElement || !purchaseBtn) return;
       cartItem.classList.add("cart-item");
       
       cartItem.innerHTML = `
+      <div class="cart-image">
         <img src="${item.image}" alt="${item.name}">
+        <span class="price"> ${item.price}</span>
+        </div>
         <div class="cart-details">
         <h4>${item.name}</h4>
-        <span class="price"> ${item.price}</span>
+        
+        
         
         <div class="quantity">
         <button class="qty-btn plus" data-index="${index}">+</button>
