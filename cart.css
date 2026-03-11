@@ -38,7 +38,7 @@ header {
   padding: 15px 0;
 }
 
-.cart-item img {
+.cart-image img {
   width: 80px;
   height: 80px;
   object-fit: cover;
@@ -58,6 +58,13 @@ header {
 .cart-item span {
   font-weight: bold;
 }
+.cart-image{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100px;
+}
+
 .quantity {
   display: flex;
   align-items: center;
