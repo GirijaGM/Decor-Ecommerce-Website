@@ -64,7 +64,7 @@ header {
   gap: 8px;
   margin: 5px 0;
 }
-quantity-controls{
+.quantity-controls{
   display:flex;
   align-items:center;
   gap:10px;
