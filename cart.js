@@ -42,7 +42,7 @@ if (!cartContainer || !totalElement || !purchaseBtn) return;
         <h4>${item.name}</h4>
         <span class="price"> ${item.price}</span>
         
-        <div class="quantity-controls">
+        <div class="quantity">
         <button class="qty-btn plus" data-index="${index}">+</button>
         <span class="quantity">${item.quantity}</span>
         <button class="qty-btn minus" data-index="${index}">-</button>
