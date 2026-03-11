@@ -51,7 +51,7 @@ if (!cartContainer || !totalElement || !purchaseBtn) return;
         <p class="subtotal">Subtotal: ₹${subtotal.toFixed(2)}</p>        
         </div>
         <button class="remove-btn" data-index="${index}">Remove</button>
-        ;
+        `;
       cartContainer.appendChild(cartItem);
     });
 
